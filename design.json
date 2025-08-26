@@ -1,0 +1,214 @@
+{
+  "name": "VOLTA E-Bikes Landing Page",
+  "description": "Modernes E-Bike Landing Page Template mit Touren, Produkten und Nutzerbewertungen",
+  "version": "1.0.0",
+  "author": "BSI CX Design Team",
+  "previewImage": "preview.png",
+  
+  "contentElementGroups": [
+    {
+      "groupId": "header-elements",
+      "label": "Header Elemente"
+    },
+    {
+      "groupId": "product-elements",
+      "label": "Produkt Elemente"
+    },
+    {
+      "groupId": "content-elements",
+      "label": "Inhalt Elemente"
+    },
+    {
+      "groupId": "review-elements",
+      "label": "Bewertung Elemente"
+    }
+  ],
+
+  "contentElements": [
+    {
+      "elementId": "logo",
+      "label": "Logo",
+      "description": "Firmen-Logo im Header",
+      "icon": "image",
+      "file": "content-elements/logo.html",
+      "group": "header-elements",
+      "parts": [
+        {
+          "partId": "plain-text",
+          "label": "Logo Text"
+        }
+      ]
+    },
+    {
+      "elementId": "navigation",
+      "label": "Navigation",
+      "description": "Hauptnavigation mit Links",
+      "icon": "menu",
+      "file": "content-elements/navigation.html",
+      "group": "header-elements",
+      "parts": [
+        {
+          "partId": "link",
+          "label": "Navigationslink"
+        }
+      ]
+    },
+    {
+      "elementId": "product-showcase",
+      "label": "Produkt Showcase",
+      "description": "Produkt-Präsentation mit Bild und Preis",
+      "icon": "product",
+      "file": "content-elements/product-showcase.html",
+      "group": "product-elements",
+      "parts": [
+        {
+          "partId": "plain-text",
+          "label": "Produkttitel"
+        },
+        {
+          "partId": "image",
+          "label": "Produktbild"
+        }
+      ],
+      "styleConfigs": [
+        "product-style"
+      ]
+    },
+    {
+      "elementId": "tours-section",
+      "label": "Touren Sektion",
+      "description": "Bereich für Touren-Übersicht",
+      "icon": "map",
+      "file": "content-elements/tours-section.html",
+      "group": "content-elements",
+      "parts": [
+        {
+          "partId": "plain-text",
+          "label": "Sektions-Titel"
+        }
+      ]
+    },
+    {
+      "elementId": "tour-card",
+      "label": "Touren-Karte",
+      "description": "Einzelne Touren-Karte mit Details",
+      "icon": "card",
+      "file": "content-elements/tour-card.html",
+      "group": "content-elements",
+      "parts": [
+        {
+          "partId": "plain-text",
+          "label": "Tour-Details"
+        }
+      ]
+    },
+    {
+      "elementId": "products-section",
+      "label": "Produkte Sektion",
+      "description": "Produktempfehlungen Bereich",
+      "icon": "grid",
+      "file": "content-elements/products-section.html",
+      "group": "content-elements",
+      "parts": [
+        {
+          "partId": "plain-text",
+          "label": "Sektions-Titel"
+        }
+      ]
+    },
+    {
+      "elementId": "product-card",
+      "label": "Produkt-Karte",
+      "description": "Einzelne Produkt-Karte",
+      "icon": "product-card",
+      "file": "content-elements/product-card.html",
+      "group": "content-elements",
+      "parts": [
+        {
+          "partId": "image",
+          "label": "Produktbild"
+        },
+        {
+          "partId": "plain-text",
+          "label": "Produktname/Preis"
+        }
+      ]
+    },
+    {
+      "elementId": "user-review",
+      "label": "Nutzerbewertung",
+      "description": "Einzelne Kundenbewertung",
+      "icon": "star",
+      "file": "content-elements/user-review.html",
+      "group": "review-elements",
+      "parts": [
+        {
+          "partId": "plain-text",
+          "label": "Nutzername/Details"
+        },
+        {
+          "partId": "formatted-text",
+          "label": "Bewertungstext",
+          "htmlEditorConfig": "review-config"
+        }
+      ]
+    }
+  ],
+
+  "styleConfigs": {
+    "product-style": {
+      "label": "Produkt-Stil",
+      "styles": [
+        {
+          "styleId": "standard-product",
+          "label": "Standard",
+          "cssClass": "product-standard"
+        },
+        {
+          "styleId": "featured-product", 
+          "label": "Hervorgehoben",
+          "cssClass": "product-featured"
+        },
+        {
+          "styleId": "premium-product",
+          "label": "Premium",
+          "cssClass": "product-premium"
+        }
+      ]
+    }
+  },
+
+  "htmlEditorConfigs": {
+    "review-config": {
+      "features": [
+        "bold",
+        "italic",
+        "underline"
+      ],
+      "textColors": [
+        "#333333",
+        "#666666",
+        "#ff6b35"
+      ]
+    }
+  },
+
+  "dropzones": {
+    "header": {
+      "label": "Header-Bereich",
+      "allowedElements": ["logo", "navigation"]
+    },
+    "sidebar": {
+      "label": "Seitenleiste",
+      "allowedElements": ["product-showcase"]
+    },
+    "main-content": {
+      "label": "Hauptinhalt",
+      "allowedElements": ["tours-section", "products-section"]
+    },
+    "reviews": {
+      "label": "Bewertungen",
+      "allowedElements": ["user-review"]
+    }
+  }
+}
